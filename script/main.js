@@ -28,7 +28,7 @@ $(document).ready(function() {
     }, 5);  });
 
   function removeHash(){
-    // history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
     history.replaceState(undefined, undefined, "#hash_value")
   }
 });
