@@ -20,6 +20,28 @@ $(window).scroll(function(){
 	});
 });
 
+$(document).ready(function() {
+  const navBtn = $('.scrptlink');
+  navBtn.click(()=>{	
+    setTimeout(()=>{
+      removeHash();
+    }, 5);  });
+
+  function removeHash(){
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+  }
+});
+
+/*
+* $('.links').click(function(e){ 
+*	 $('html, body').animate({
+*   scrollTop: $( $.attr(this, 'href') ).offset().top - $('.nav').height()
+*	 }, 1000);
+*  return false;
+* });
+*/
+
+
 //navbar active
 
 // $(document).ready(function() {
