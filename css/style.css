@@ -17,6 +17,7 @@ html, body{
 }
 .mobile-intro{
 display: none;
+visibility:hidden;
 
 }
 .downarrow a { 
