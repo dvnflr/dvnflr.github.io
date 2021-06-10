@@ -1,0 +1,38 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+.loader{
+	/*visibility: hidden;	//temp*/
+
+	position:fixed;
+		z-index: 9990;
+	top:0;
+	left:0;
+	background:#222222;
+	height: 100%;
+	width:100%;
+	display:grid;
+	place-items:center;
+	/*transition: 5s; */
+
+}
+
+.disappear{
+height: 1px;
+transition: .5s ease-in;
+transition-delay: 1s;
+	/*animation:remove 1s forwards;*/
+	/*transform:translateY(100%);*/
+}
+.disappear img{
+	animation: remove 1s forwards;
+	
+}
+@keyframes remove{
+	100%{
+		opacity:0;
+		visibility: hidden;
+	}
+}

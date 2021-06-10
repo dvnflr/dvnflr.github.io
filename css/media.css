@@ -1,0 +1,176 @@
+@media(max-width: 991px){
+	.container{
+ display:flex;
+ flex-direction: column;
+}
+section{
+	display:relative;
+}
+header{
+	transition:none;
+	top: 0;
+		height: 10%;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+}
+header.sticky{
+		transition:1s;
+}
+.nav-container{
+	width: 100vw;
+	white-space: nowrap;
+
+	min-width: 1vw;
+	  	font-size: calc(1vw + 1.5rem);
+}
+header .front1{
+  margin-left:calc(.5vw + 4rem);
+  	font-size: calc(.5vw + .7em);
+}
+
+#land h1,#land p{
+	font-size: 3.5rem;
+}
+#land .landnav{
+	margin-top: 100px;
+}
+#land .landnav .nav-link{
+	font-size: 3rem;
+}
+.socials-wrapper{
+display: flex;
+top: 0;
+right: 0;
+left: 0;
+justify-content: center;
+}
+ul.icons {
+  margin: 1em 0 2em 1em;
+}
+  ul.icons li {
+  margin: 1.5em 0 2em 1.5em;
+    padding: 1em 0 0 1em;
+  }
+.icon.style2:before {
+      font-size:3rem;
+    }
+#whoami .content-wrapper{
+  width: 100vw;
+  margin: 0 10vw 0 10vw;
+   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem 2rem;
+}
+.section-wrapper{
+display: none;
+visibility: none;
+}
+.section-title::after{
+  content:'';
+  display: none;
+  visibility: hidden;
+}
+#works .content-wrapper{
+  position: absolute;
+  margin: 0 1em 0 1em;
+}
+.mobile-hide{
+	display: inline;
+	visibility: visible;
+}
+.section-title-vertical{
+	position: absolute;
+	top: 0;
+	width: 90vw;
+	text-align: center;
+	font-size: 3rem;
+}
+.section-title-vertical::after{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+}
+#works{
+	margin-top: 100px;
+
+}
+#works .content-wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#works h1{
+		display:none;
+		visibility: hidden;
+}
+#works .content-works{
+display: flex;
+flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
+#works 	.content-rect{
+	font-size: 2rem;
+	margin-top: 100px;
+}
+#works .cicle-bg{
+	position: absolute;
+}
+#works .img-wrapper{
+	position: relative;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	 width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#whoami .content-wrapper{
+ display: flex;
+flex-direction: column;
+position: relative;
+}
+#whoami .img-wrapper{
+position: relative;
+  width:150px;
+  height: 150px;
+  border-radius:100px;
+}
+#whoami .content-text .break{
+
+  font-weight: 500;
+}
+#contact .message-text{
+  margin-top: 3em;
+  width: 80%; 
+  line-height: 1.5rem;
+}
+#contact .text{
+
+  font-size: calc(1vw + 1rem);
+}
+#contact .small-text{
+  font-size: calc(1vw + .6rem);
+}
+#contact .email-bar{
+  height: 30px;
+  border: 2px solid #000;
+}
+#contact .email-itself{
+  opacity:1;
+}
+
+#contact .hover-on-me{
+ display: none;
+ visibility: hidden;
+}
+
+}

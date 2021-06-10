@@ -1,66 +1,48 @@
-//smoothscroll into
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-  easing:'easeInOutQuart'
+
+
+// preloader
+var loader = document.querySelector(".loader")
+
+window.addEventListener("load", vanish);
+
+function vanish(){
+	loader.classList.add("disappear");
+}
+// console scroll
+window.addEventListener("scroll",function(){
+    console.log(scrollX,scrollY);  	
 });
 
-//this is for the 'scroll back to top' thing in the corner
-$(document).ready(function(){
-$(window).scroll(function(){
-	if($(this).scrollTop()>180){
-		$('#backToTop').fadeIn();
-	} else{
-		$('#backToTop').fadeOut();
-	}
-	});
-	$('#backToTop').click(function(){
-		$("html,body").animate({ scrollTop:0},600);
-		return false;
-	});
+// onscroll nav pop up
+window.addEventListener("scroll",function(){
+	const header = document.querySelector("header");
+	const sticky = document.querySelector("header.sticky")
+ if (window.innerWidth > 991) {
+if (window.scrollX >160) {
+    header.classList.add("sticky");
+   sticky.style.transform="translate(-131%,-50%)rotate(-90deg)";
+  } else {
+   sticky.style.transform="translate3d(-140%,-50%,0)rotate(-90deg)";	
+  }}
+
+  if (window.innerWidth < 991) {
+if (window.scrollY >160) {
+    header.classList.add("sticky");
+   sticky.style.transform="translate(-50%,0%)";
+  } else {
+        // console.log(scrollX,scrollY);   
+        // header.classList.remove("sticky");
+   sticky.style.transform="translate(-50%,-100%)";  
+  }}
+
+
 });
+//remove hash
+// remove fragment as much as it can go without adding an entry in browser history:
+window.location.replace("#");
 
-$(document).ready(function() {
-  const navBtn = $('.scrptlink');
-  navBtn.click(()=>{	
-    setTimeout(()=>{
-      removeHash();
-    }, 5);  });
+// slice off the remaining '#' in HTML5:    
+if (typeof window.history.replaceState == 'function') {
+  history.replaceState({}, '', window.location.href.slice(0, -1));
+}
 
-  function removeHash(){
-    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-  }
-});
-
-/*
-* $('.links').click(function(e){ 
-*	 $('html, body').animate({
-*   scrollTop: $( $.attr(this, 'href') ).offset().top - $('.nav').height()
-*	 }, 1000);
-*  return false;
-* });
-*/
-
-
-//navbar active
-
-// $(document).ready(function() {
-//   $('.nav-link').click(function() {
-//       var dis = $(this),
-//           disTarget = dis.data('target'),
-//           ScrollTo = $(disTarget).offset().top;
-//       dis.addClass('active').siblings('.nav-link').removeClass('active');
-//       $('html,body').animate({ scrollTop: ScrollTo },"slow");
-//   });
-//   });
-
-
-//navbar back when scroll
-// $(window).on("scroll", function() {
-//     if ($(window).scrollTop()) {
-//         $('.nav').addClass("black");
-//     }
-//     else {
-//         $('.nav').removeClass("black");
-//     }
-// });
