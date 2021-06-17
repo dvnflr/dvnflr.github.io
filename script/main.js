@@ -9,9 +9,7 @@ function vanish(){
 	loader.classList.add("disappear");
 }
 // console scroll
-window.addEventListener("scroll",function(){
-    console.log(scrollX,scrollY);  	
-});
+
 
 // onscroll nav pop up
 window.addEventListener("scroll",function(){

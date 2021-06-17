@@ -17,9 +17,8 @@
   width: 0;
 display: none;
 visibility: hidden;
-
-
 }
+
 
 * {
   margin: 0;
@@ -28,6 +27,8 @@ visibility: hidden;
 }
 html{
   scroll-behavior: smooth;
+  scrollbar-width:none;
+  overflow-y:hidden;
 }
 body{
    max-height: 100vh;
@@ -200,7 +201,7 @@ font-size: 3em;
     font-family: var(--font1);
 }
 
-#land h1::before,h1::after{
+#land h1::before,#land h1::after{
   content:"";
   position:absolute;
   top:0;
@@ -358,7 +359,7 @@ ul.icons {
 }
 #works .content-wrapper{
   position: absolute;
-  margin: 0 10vw 0 10vw;
+  margin: 0 0 0 19%;
 }
 #works .content-works{
   height: 80vh;
